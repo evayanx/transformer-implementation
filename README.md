@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Transformer 文本摘要模型实现（课程作业）
 
 本项目实现了完整的 Transformer 模型，用于 Gigaword 数据集上的轻量级文本摘要任务。支持 Encoder-Decoder 结构、多头注意力、位置编码、残差连接与 LayerNorm，并完成了系统的消融实验。
@@ -35,3 +36,7 @@ python src/train.py \
     --num_heads 8 \
     --num_layers 4 \
     --max_seq_len 128
+=======
+# transformer-implementation
+A complete implementation of Transformer model with ablation studies
+>>>>>>> 857f0d2d03933838208e72cf43ef38ff5a3f1f20
