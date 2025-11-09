@@ -17,15 +17,6 @@ transformer-implementation/
 └── README.md # 项目说明
 
 
-# 快速开始
-```bash
-# 安装依赖
-pip install -r requirements.txt
-
-# 运行训练
-chmod +x scripts/run.sh
-./scripts/run.sh
-
 #复现实验
 python src/train.py \
     --seed 42 \
@@ -36,6 +27,38 @@ python src/train.py \
     --num_heads 8 \
     --num_layers 4 \
     --max_seq_len 128
+
+## 环境要求
+
+### 硬件要求
+- **GPU**: NVIDIA GPU 
+- **RAM**: ≥ 8GB
+- **存储空间**: ≥ 2GB 
+
+### 软件要求
+- **操作系统**: Windows 
+- **Python**: 3.8 
+- **CUDA**: 11.0 
+
+## 安装依赖
+
+```bash
+# 创建conda环境
+conda create -n transformer python=3.10
+conda activate transformer
+
+# 安装PyTorch 
+pip install torch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0
+
+# 安装项目依赖
+pip install -r requirements.txt
+
+# 使用配置文件训练
+python src/train.py --config configs/base.yaml --seed 42
+
+# 运行消融实验
+chmod +x scripts/run_ablation.sh
+./scripts/run_ablation.sh
 =======
 # transformer-implementation
 A complete implementation of Transformer model with ablation studies
